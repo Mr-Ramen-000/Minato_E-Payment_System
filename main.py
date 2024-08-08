@@ -628,7 +628,7 @@ def home():
     def temp_profile():
         global temp_profile_img
         temp_profile_img = Image.open("Images/Profile_pic/temp_image.png")
-        temp_profile_img = temp_profile_img.resize((190, 165), Image.ANTIALIAS)
+        temp_profile_img = temp_profile_img.resize((190, 165))
         temp_profile_img = ImageTk.PhotoImage(temp_profile_img)
 
     def int_only(event):
@@ -688,7 +688,7 @@ def home():
         if str(result[0][7]) != 'None':
             binary_To_file(result[0][7])
             profile_img = Image.open("Images/Profile_pic/profile.png")
-            profile_img = profile_img.resize((190, 165), Image.ANTIALIAS)
+            profile_img = profile_img.resize((190, 165))
             profile_img = ImageTk.PhotoImage(profile_img)
             w, h = 70, 90
         else:
